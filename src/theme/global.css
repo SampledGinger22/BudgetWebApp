@@ -1,0 +1,79 @@
+/* ─── Inter font import ──────────────────────────────────────────────────────── */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+/* ─── Reset / base ──────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f5f0e8;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Monetary value classes ────────────────────────────────────────────────── */
+/* System monospace stack — no extra download required */
+.money {
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Positive monetary amounts (income, credits) — sage green */
+.money-positive {
+  color: #567759;
+}
+
+/* Negative monetary amounts (expenses, debits) — warm red */
+.money-negative {
+  color: #b94040;
+}
+
+/* ─── Focus rings ───────────────────────────────────────────────────────────── */
+/* Terracotta 2px outline for WCAG AA keyboard navigation visibility */
+*:focus-visible {
+  outline: 2px solid #a95537;
+  outline-offset: 2px;
+}
+
+/* ─── Interactive element transitions ───────────────────────────────────────── */
+button,
+a,
+[role='button'] {
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+/* ─── Table row hover ───────────────────────────────────────────────────────── */
+/* Subtle terracotta tint — faint to not overwhelm earthy palette */
+.ant-table-tbody > tr:hover > td {
+  background-color: rgba(169, 85, 55, 0.04) !important;
+}
+
+/* ─── Reduced motion ────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
