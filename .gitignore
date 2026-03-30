@@ -41,5 +41,26 @@ coverage/
 .gsd/
 .planning/
 
+# Claude Code artifacts
+.bg-shell/
+CONTEXT-DUMP.md
+
 # Misc
 *.tgz
+
+# ── GSD baseline (auto-generated) ──
+.gsd
+*.code-workspace
+.env.*
+!.env.example
+dist/
+build/
+__pycache__/
+*.pyc
+.venv/
+venv/
+target/
+vendor/
+*.log
+.cache/
+tmp/
