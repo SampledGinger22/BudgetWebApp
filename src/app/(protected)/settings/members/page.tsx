@@ -182,9 +182,9 @@ function EditMemberModal({ member, open, onClose, onSave }: {
       okText="Save"
       okButtonProps={{ loading: saving, style: { backgroundColor: COLORS.terracotta, borderColor: COLORS.terracotta } }}
       afterOpenChange={(isOpen) => { if (isOpen) handleOpen() }}
-      destroyOnClose
+      destroyOnHidden
     >
-      <Space direction="vertical" size={14} style={{ width: '100%', marginTop: 12 }}>
+      <Space orientation="vertical" size={14} style={{ width: '100%', marginTop: 12 }}>
         <div>
           <label style={{ display: 'block', marginBottom: 4, fontWeight: 500, color: COLORS.walnut }}>Name</label>
           <Input value={name} onChange={(e) => { setName(e.target.value); setInitials(deriveInitials(e.target.value)) }} placeholder="e.g. Mason" autoFocus />
@@ -279,7 +279,7 @@ export default function MembersPage(): React.JSX.Element {
   }
 
   return (
-    <Space direction="vertical" size={20} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={20} style={{ width: '100%' }}>
       <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
         <div>
           <Title level={4} style={{ margin: 0, color: COLORS.walnut }}>Household Members</Title>

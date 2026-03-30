@@ -49,7 +49,7 @@ export function ProfileManager({ profiles, wizardState, onUpdate }: ProfileManag
   }
 
   return (
-    <Space direction="vertical" size={8} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={8} style={{ width: '100%' }}>
       <Text strong style={{ color: COLORS.walnut }}>Saved Profiles</Text>
       <List size="small" dataSource={profiles} renderItem={(profile) => (
         <List.Item

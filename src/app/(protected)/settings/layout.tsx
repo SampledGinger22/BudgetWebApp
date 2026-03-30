@@ -1,7 +1,8 @@
 'use client'
 
 import { Tabs } from 'antd'
-import { usePathname, useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const settingsTabs = [
   { key: '/settings/pay-schedule', label: 'Pay Schedule' },
@@ -13,7 +14,6 @@ const settingsTabs = [
 ]
 
 export default function SettingsLayout({ children }: { children: React.ReactNode }): React.JSX.Element {
-  const router = useRouter()
   const pathname = usePathname()
 
   const activeKey = settingsTabs.find((t) => pathname.startsWith(t.key))?.key ?? settingsTabs[0].key
@@ -22,8 +22,10 @@ export default function SettingsLayout({ children }: { children: React.ReactNode
     <div>
       <Tabs
         activeKey={activeKey}
-        onChange={(key) => router.push(key)}
-        items={settingsTabs.map((tab) => ({ key: tab.key, label: tab.label }))}
+        items={settingsTabs.map((tab) => ({
+          key: tab.key,
+          label: <Link href={tab.key} prefetch={true} style={{ color: 'inherit' }}>{tab.label}</Link>,
+        }))}
         style={{ marginBottom: 16 }}
       />
       {children}

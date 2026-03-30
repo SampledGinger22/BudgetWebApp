@@ -148,7 +148,7 @@ function CreateAllModal({ suggestions, open, onConfirm, onCancel }: CreateAllMod
       okButtonProps={{ disabled: selectedCount === 0, loading: creating }}
       width={540}
     >
-      <Space direction="vertical" size={8} style={{ width: '100%' }}>
+      <Space orientation="vertical" size={8} style={{ width: '100%' }}>
         <Text type="secondary" style={{ fontSize: 13 }}>
           Review and select which patterns to create as recurring templates. You can edit each after creation.
         </Text>

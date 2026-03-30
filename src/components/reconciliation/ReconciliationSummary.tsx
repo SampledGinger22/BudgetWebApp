@@ -158,7 +158,7 @@ export function ReconciliationSummary({
         <Alert
           type="success"
           showIcon
-          message={
+          title={
             <div>
               <Text style={{ fontSize: 13 }}>
                 All accounts have been reconciled. Would you like to finalize this budget period?

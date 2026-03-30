@@ -14,7 +14,8 @@ import {
   RetweetOutlined,
   ImportOutlined,
 } from '@ant-design/icons'
-import { useRouter, usePathname } from 'next/navigation'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { COLORS } from '@/theme'
 import { useUIStore } from '@/stores/ui-store'
 import { useUnconfirmedCount } from '@/lib/api/recurring'
@@ -87,7 +88,6 @@ const menuItems: MenuItem[] = [
 ]
 
 export function Sidebar(): React.JSX.Element {
-  const router = useRouter()
   const pathname = usePathname()
   const { sidebarCollapsed: collapsed, toggleSidebar } = useUIStore()
 
@@ -127,7 +127,11 @@ export function Sidebar(): React.JSX.Element {
     return {
       key: item.key,
       icon,
-      label: item.label,
+      label: (
+        <Link href={item.path} prefetch={true} style={{ color: 'inherit' }}>
+          {item.label}
+        </Link>
+      ),
     }
   })
 
@@ -177,15 +181,11 @@ export function Sidebar(): React.JSX.Element {
         {toggleIcon}
       </div>
 
-      {/* Navigation menu */}
+      {/* Navigation menu — uses <Link> labels for prefetch + instant loading.tsx */}
       <Menu
         mode="inline"
         selectedKeys={[selectedKey]}
         inlineCollapsed={collapsed}
-        onClick={({ key }) => {
-          const item = menuItems.find((m) => m.key === key)
-          if (item) router.push(item.path)
-        }}
         items={antMenuItems}
         style={{
           backgroundColor: COLORS.creamDark,

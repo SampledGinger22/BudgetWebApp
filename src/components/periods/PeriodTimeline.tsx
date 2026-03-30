@@ -22,7 +22,7 @@ export function PeriodTimeline({ periods }: PeriodTimelineProps): React.JSX.Elem
   }
 
   return (
-    <Space direction="vertical" size={8} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={8} style={{ width: '100%' }}>
       <Text strong style={{ color: COLORS.walnut, fontSize: 14 }}>Budget Periods</Text>
       <Collapse accordion>
         {sortedPeriods.map((period) => {
@@ -42,7 +42,7 @@ export function PeriodTimeline({ periods }: PeriodTimelineProps): React.JSX.Elem
                 </Space>
               }
             >
-              <Space direction="vertical" size={12} style={{ width: '100%' }}>
+              <Space orientation="vertical" size={12} style={{ width: '100%' }}>
                 {period.sub_periods.map((sp) => {
                   const spIsCurrent = sp.start_date <= today && today <= sp.end_date
                   return (

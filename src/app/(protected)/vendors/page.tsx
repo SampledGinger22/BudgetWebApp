@@ -67,7 +67,7 @@ export default function VendorsPage(): React.JSX.Element {
   }
 
   return (
-    <Space direction="vertical" size={20} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={20} style={{ width: '100%' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Title level={3} style={{ margin: 0, color: COLORS.walnut }}>Payees</Title>
         <Button type="primary" icon={<PlusOutlined />} onClick={handleAddVendor}>

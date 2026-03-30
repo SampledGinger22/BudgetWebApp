@@ -64,18 +64,18 @@ export function Step4Confirm({ wizardState, stagedTransactions, onImportSuccess 
   }
 
   return (
-    <Space direction="vertical" size={20} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={20} style={{ width: '100%' }}>
       <Title level={4} style={{ color: COLORS.walnut, margin: 0 }}>Confirm Import</Title>
       <div style={{ display: 'flex', gap: 24 }}>
         <Statistic title="Transactions" value={includedTransactions.length} />
         <Statistic title="Income" value={formatCurrency(totalIncome)} valueStyle={{ color: COLORS.sage, fontFamily: MONEY_FONT }} />
         <Statistic title="Expenses" value={formatCurrency(totalExpenses)} valueStyle={{ color: COLORS.terracotta, fontFamily: MONEY_FONT }} />
       </div>
-      <Alert type="info" message={`Importing ${includedTransactions.length} transactions into the selected account from "${wizardState.fileName}".`} showIcon />
+      <Alert type="info" title={`Importing ${includedTransactions.length} transactions into the selected account from "${wizardState.fileName}".`} showIcon />
 
       {!wizardState.profileId && (
         <div style={{ background: COLORS.creamDark, borderRadius: 8, padding: 16 }}>
-          <Space direction="vertical" size={8} style={{ width: '100%' }}>
+          <Space orientation="vertical" size={8} style={{ width: '100%' }}>
             <Text style={{ color: COLORS.walnut }}>Save column mapping as profile? (optional)</Text>
             <Input placeholder="Profile name..." value={saveProfileName} onChange={(e) => setSaveProfileName(e.target.value)} style={{ maxWidth: 300 }} />
           </Space>

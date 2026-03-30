@@ -112,7 +112,7 @@ export function AccountModal({ open, onClose, onSuccess, editAccount }: AccountM
       onCancel={handleCancel}
       afterClose={afterClose}
       okText={editAccount ? 'Save Changes' : 'Add Account'}
-      destroyOnClose={false}
+      destroyOnHidden={false}
       width={520}
     >
       <Form form={form} layout="vertical" initialValues={initialValues} key={editAccount?.id ?? 'new'}>

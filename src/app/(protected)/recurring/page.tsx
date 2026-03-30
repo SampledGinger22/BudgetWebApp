@@ -255,7 +255,7 @@ export default function RecurringPage(): React.JSX.Element {
   const showGuidedEmptyState = !loading && templates.length === 0
 
   return (
-    <Space direction="vertical" size={24} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={24} style={{ width: '100%' }}>
       <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
         <div>
           <Title level={3} style={{ margin: 0, color: COLORS.walnut }}>Recurring Transactions</Title>
@@ -271,7 +271,7 @@ export default function RecurringPage(): React.JSX.Element {
       {showGuidedEmptyState && (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '48px 24px', border: `2px dashed rgba(169, 85, 55, 0.2)`, borderRadius: 8, backgroundColor: COLORS.cream, textAlign: 'center' }}>
           <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description={
-            <Space direction="vertical" size={4}>
+            <Space orientation="vertical" size={4}>
               <Text strong style={{ color: COLORS.walnut, fontSize: 16 }}>Set up your recurring transactions</Text>
               <Text type="secondary" style={{ maxWidth: 380, display: 'block' }}>Track subscriptions, bills, and income that repeat on a schedule.</Text>
             </Space>

@@ -83,7 +83,7 @@ export default function LoginForm() {
         </Text>
       </div>
 
-      <Space direction="vertical" size={12} style={{ width: '100%' }}>
+      <Space orientation="vertical" size={12} style={{ width: '100%' }}>
         <Button
           block
           size="large"

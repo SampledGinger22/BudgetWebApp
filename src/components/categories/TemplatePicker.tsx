@@ -196,7 +196,7 @@ export function TemplatePicker({ groups, onApply, onSkip }: TemplatePickerProps)
               }}
               styles={{ body: { padding: 20 } }}
             >
-              <Space direction="vertical" size={8} style={{ width: '100%' }}>
+              <Space orientation="vertical" size={8} style={{ width: '100%' }}>
                 <div style={{ color: selected === template.id ? COLORS.terracotta : COLORS.walnut }}>
                   {template.icon}
                 </div>

@@ -99,7 +99,7 @@ export default function PaySchedulePage(): React.JSX.Element {
   }
 
   return (
-    <Space direction="vertical" size={16} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={16} style={{ width: '100%' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <Title level={4} style={{ margin: 0, color: COLORS.walnut }}>Pay Schedule Configuration</Title>
         <Button type="primary" icon={<PlusOutlined />} onClick={() => setAddModalOpen(true)}
@@ -108,7 +108,7 @@ export default function PaySchedulePage(): React.JSX.Element {
         </Button>
       </div>
 
-      {schedules.length === 0 && <Alert type="info" message="Configure your pay schedule to start creating budget periods." showIcon style={{ marginBottom: 8 }} />}
+      {schedules.length === 0 && <Alert type="info" title="Configure your pay schedule to start creating budget periods." showIcon style={{ marginBottom: 8 }} />}
 
       {schedules.length > 0 && (
         <Collapse accordion={false}>
@@ -169,7 +169,7 @@ export default function PaySchedulePage(): React.JSX.Element {
         </div>
       </Modal>
 
-      <Modal title="Add Income Schedule" open={addModalOpen} onCancel={() => setAddModalOpen(false)} footer={null} destroyOnClose>
+      <Modal title="Add Income Schedule" open={addModalOpen} onCancel={() => setAddModalOpen(false)} footer={null} destroyOnHidden>
         <AddScheduleForm onSubmit={handleAddSchedule} onCancel={() => setAddModalOpen(false)} />
       </Modal>
     </Space>

@@ -1,10 +1,11 @@
 'use client'
 
 import { useEffect } from 'react'
-import { Layout, message } from 'antd'
+import { Layout } from 'antd'
 import { usePathname } from 'next/navigation'
 import { Sidebar } from './Sidebar'
 import { TopBar } from './TopBar'
+import { NavigationProgress } from './NavigationProgress'
 import { PeriodCloseBanner } from '@/components/budget/PeriodCloseBanner'
 import { RecurringConfirmBanner } from '@/components/recurring/RecurringConfirmBanner'
 import { useRegeneratePeriods } from '@/lib/api/periods'
@@ -44,18 +45,12 @@ export function AppShell({ children }: AppShellProps): React.JSX.Element {
   const pageTitle = derivePageTitle(pathname)
   const regeneratePeriods = useRegeneratePeriods()
 
-  // Auto-generate upcoming periods on app launch
+  // Auto-generate upcoming periods once per session (not on every navigation)
   useEffect(() => {
-    regeneratePeriods.mutate(undefined, {
-        onSuccess: () => {
-          // Period generation is silent — TanStack Query cache invalidation
-          // handles refreshing period lists across the app
-        },
-        onError: () => {
-          // Non-critical: silent failure — periods will be generated on next manual action
-        },
-      },
-    )
+    const key = '__budget_periods_regenerated__'
+    if (sessionStorage.getItem(key)) return
+    sessionStorage.setItem(key, '1')
+    regeneratePeriods.mutate()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -67,7 +62,8 @@ export function AppShell({ children }: AppShellProps): React.JSX.Element {
       </div>
 
       {/* Main area: TopBar + banner + scrollable content */}
-      <Layout style={{ flexDirection: 'column', overflow: 'hidden' }}>
+      <Layout style={{ flexDirection: 'column', overflow: 'hidden', position: 'relative' }}>
+        <NavigationProgress />
         <TopBar title={pageTitle} />
 
         {/* Period close/lock reminder banner — renders conditionally */}

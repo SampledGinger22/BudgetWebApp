@@ -135,7 +135,7 @@ export function CategoryModal({
       onCancel={onClose}
       okText={isEditing ? 'Save Changes' : 'Add Category'}
       okButtonProps={{ style: { backgroundColor: COLORS.terracotta, borderColor: COLORS.terracotta } }}
-      destroyOnClose
+      destroyOnHidden
     >
       <Form form={form} layout="vertical" style={{ marginTop: 16 }}>
         <Form.Item label="Name" name="name" rules={[{ required: true, message: 'Category name is required' }]}>

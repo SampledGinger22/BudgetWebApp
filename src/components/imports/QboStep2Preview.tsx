@@ -106,7 +106,7 @@ export function QboStep2Preview({ wizardState, qboParseResult, stagedTransaction
   ]
 
   return (
-    <Space direction="vertical" size={16} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={16} style={{ width: '100%' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Space>
           <Text strong style={{ color: COLORS.walnut }}>{includedCount} transactions to import</Text>

@@ -110,7 +110,7 @@ export function PayScheduleCard({ schedule, isPrimary, onSave, onDelete, onSetPr
   }
 
   return (
-    <Space direction="vertical" size={12} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={12} style={{ width: '100%' }}>
       {editing ? (
         <Form form={form} layout="vertical" style={{ maxWidth: 500 }}>
           <Form.Item name="name" label="Name" rules={[{ required: true }]}>
@@ -118,7 +118,7 @@ export function PayScheduleCard({ schedule, isPrimary, onSave, onDelete, onSetPr
           </Form.Item>
           <Form.Item name="schedule_type" label="Frequency">
             <Radio.Group>
-              <Space direction="vertical">
+              <Space orientation="vertical">
                 <Radio value="semimonthly">Semi-monthly</Radio>
                 <Radio value="monthly">Monthly</Radio>
                 <Radio value="biweekly">Bi-weekly</Radio>

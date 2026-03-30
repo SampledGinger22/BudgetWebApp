@@ -22,7 +22,7 @@ export function ImportSummary({ batchId, imported, accountId, fileName, profileN
       icon={<CheckCircleOutlined style={{ color: COLORS.sage }} />}
       title={`Successfully imported ${imported} transaction${imported !== 1 ? 's' : ''}`}
       subTitle={
-        <Space direction="vertical" size={4}>
+        <Space orientation="vertical" size={4}>
           <Text>From: {fileName}</Text>
           {profileName && <Text type="secondary">Mapping saved as &ldquo;{profileName}&rdquo;</Text>}
         </Space>

@@ -64,7 +64,7 @@ export function PeriodCloseBanner(): React.JSX.Element | null {
         showIcon
         closable
         onClose={() => setCloseBannerDismissed(true)}
-        message="You have budget periods ready to finalize"
+        title="You have budget periods ready to finalize"
         description={`Periods needing finalization: ${periodList}`}
         action={
           <Button
@@ -92,7 +92,7 @@ export function PeriodCloseBanner(): React.JSX.Element | null {
         showIcon
         closable
         onClose={() => setLockBannerDismissed(true)}
-        message="You have finalized periods that haven't been frozen yet"
+        title="You have finalized periods that haven't been frozen yet"
         action={
           <Button
             size="small"

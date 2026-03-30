@@ -129,7 +129,7 @@ export default function AccountsPage(): React.JSX.Element {
   const hasAccounts = accounts.length > 0
 
   return (
-    <Space direction="vertical" size={16} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={16} style={{ width: '100%' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <Title level={3} style={{ margin: 0, color: COLORS.walnut }}>Accounts</Title>
         <Button type="primary" icon={<PlusOutlined />} onClick={handleAddClick} loading={isLoading}>

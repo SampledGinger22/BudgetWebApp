@@ -294,7 +294,7 @@ export function TemplateModal({ open, onClose, onSave, editTemplate, prefillData
       title={editTemplate ? 'Edit Recurring Template' : 'Add Recurring Template'}
       open={open} onOk={() => void handleOk()} onCancel={handleCancel} afterClose={afterClose}
       okText={editTemplate ? 'Save Changes' : 'Create Template'}
-      confirmLoading={saving} width={600} destroyOnClose={false}
+      confirmLoading={saving} width={600} destroyOnHidden={false}
     >
       <Form form={form} layout="vertical" key={editTemplate?.id ?? 'new'}>
         <Divider orientationMargin={0} style={{ marginTop: 8, marginBottom: 16 }}>Template Info</Divider>

@@ -50,7 +50,7 @@ export function QboStep3Confirm({ wizardState, qboParseResult, stagedTransaction
   }
 
   return (
-    <Space direction="vertical" size={20} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={20} style={{ width: '100%' }}>
       <Title level={4} style={{ color: COLORS.walnut, margin: 0 }}>Confirm QBO Import</Title>
       <div style={{ display: 'flex', gap: 24 }}>
         <Statistic title="Transactions" value={includedTransactions.length} />
@@ -58,7 +58,7 @@ export function QboStep3Confirm({ wizardState, qboParseResult, stagedTransaction
         <Statistic title="Expenses" value={formatCurrency(totalExpenses)} valueStyle={{ color: COLORS.terracotta, fontFamily: MONEY_FONT }} />
       </div>
       {qboParseResult.accountInfo && (
-        <Alert type="info" showIcon message={`Bank: ${qboParseResult.accountInfo.bankId} / Account: ${qboParseResult.accountInfo.acctId} (${qboParseResult.accountInfo.acctType})`} />
+        <Alert type="info" showIcon title={`Bank: ${qboParseResult.accountInfo.bankId} / Account: ${qboParseResult.accountInfo.acctId} (${qboParseResult.accountInfo.acctType})`} />
       )}
       <Button type="primary" size="large" icon={<CheckCircleOutlined />} onClick={() => void handleImport()} loading={importing}
         disabled={includedTransactions.length === 0}>

@@ -41,7 +41,7 @@ export function RecurringConfirmBanner(): React.JSX.Element | null {
       showIcon
       closable={persistence === 'session'}
       onClose={() => setSessionDismissed(true)}
-      message={`You have ${unconfirmedCount} unconfirmed recurring entr${unconfirmedCount === 1 ? 'y' : 'ies'} past their scheduled date`}
+      title={`You have ${unconfirmedCount} unconfirmed recurring entr${unconfirmedCount === 1 ? 'y' : 'ies'} past their scheduled date`}
       action={
         <Button
           size="small"

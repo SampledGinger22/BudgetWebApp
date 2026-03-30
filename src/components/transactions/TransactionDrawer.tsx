@@ -149,7 +149,7 @@ export function TransactionDrawer({
       open={open}
       onClose={onClose}
       footer={footer}
-      destroyOnClose={false}
+      destroyOnHidden={false}
     >
       <Form
         form={form}

@@ -247,7 +247,7 @@ export function CategoryTree({
 
   return (
     <div>
-      <Space direction="vertical" size={12} style={{ width: '100%' }}>
+      <Space orientation="vertical" size={12} style={{ width: '100%' }}>
         {groups.map((group) => (
           <GroupSection key={group.id} group={group} showArchived={showArchived} onAddCategory={handleAddCategory} onEdit={handleEdit} onAddSub={handleAddSub} onArchive={onArchiveCategory} onUnarchive={onUnarchiveCategory} onDelete={onDeleteCategory} onReorder={onReorderCategories} />
         ))}

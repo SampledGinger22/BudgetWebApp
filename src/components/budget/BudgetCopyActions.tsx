@@ -176,7 +176,7 @@ export function BudgetCopyActions({
             <Spin />
           </div>
         ) : (
-          <Space direction="vertical" style={{ width: '100%' }} size={12}>
+          <Space orientation="vertical" style={{ width: '100%' }} size={12}>
             {/* Select all / deselect all controls */}
             <Space size={8}>
               <Button size="small" onClick={handleSelectAll}>

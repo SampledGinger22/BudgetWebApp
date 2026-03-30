@@ -68,11 +68,11 @@ function PasswordStrengthIndicator({ password }: { password: string }) {
         percent={percent}
         showInfo={false}
         strokeColor={strokeColor}
-        trailColor="rgba(92, 61, 30, 0.08)"
+        railColor="rgba(92, 61, 30, 0.08)"
         size="small"
         style={{ marginBottom: 8 }}
       />
-      <Space direction="vertical" size={2}>
+      <Space orientation="vertical" size={2}>
         {PASSWORD_CHECKS.map((check) => {
           const passed = check.test(password)
           return (

@@ -64,7 +64,7 @@ export function PayChangeTimeline({ scheduleId }: PayChangeTimelineProps): React
   }
 
   return (
-    <Space direction="vertical" size={8} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={8} style={{ width: '100%' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Text strong style={{ color: COLORS.walnut, fontSize: 13 }}>Pay Rate History</Text>
         <Button size="small" icon={<PlusOutlined />} onClick={() => { setAdding(true); setNewDate(dayjs()); setNewAmount(null); setNewNotes('') }}>Add Change</Button>

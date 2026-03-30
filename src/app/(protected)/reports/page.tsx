@@ -15,7 +15,7 @@ const REPORT_CARDS = [
 
 export default function ReportsPage(): React.JSX.Element {
   return (
-    <Space direction="vertical" size={16} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={16} style={{ width: '100%' }}>
       <Title level={3} style={{ margin: 0, color: COLORS.walnut }}>Reports</Title>
       <Text type="secondary">Reports and analytics will be available in a future update.</Text>
       <Row gutter={[16, 16]} style={{ marginTop: 8 }}>
@@ -25,7 +25,7 @@ export default function ReportsPage(): React.JSX.Element {
               style={{ borderColor: 'rgba(92, 61, 30, 0.12)', opacity: 0.6 }}
               styles={{ body: { padding: 20 } }}
             >
-              <Space direction="vertical" size={4}>
+              <Space orientation="vertical" size={4}>
                 <Space>
                   <span style={{ fontSize: 20, color: COLORS.copper }}>{card.icon}</span>
                   <Text strong style={{ color: COLORS.walnut }}>{card.title}</Text>

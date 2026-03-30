@@ -212,7 +212,7 @@ export function TransferModal({
       onCancel={handleCancel}
       footer={null}
       width={480}
-      destroyOnClose
+      destroyOnHidden
     >
       <Form
         form={form}

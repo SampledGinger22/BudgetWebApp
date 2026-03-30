@@ -60,10 +60,10 @@ export default function NotificationsPage(): React.JSX.Element {
   }
 
   return (
-    <Space direction="vertical" size={24} style={{ width: '100%', maxWidth: 480 }}>
+    <Space orientation="vertical" size={24} style={{ width: '100%', maxWidth: 480 }}>
       <Title level={4} style={{ margin: 0, color: COLORS.walnut }}>Notifications</Title>
 
-      <Space direction="vertical" size={16} style={{ width: '100%' }}>
+      <Space orientation="vertical" size={16} style={{ width: '100%' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 16 }}>
           <div>
             <Text strong style={{ color: COLORS.walnut, display: 'block' }}>Period close reminders</Text>
@@ -92,7 +92,7 @@ export default function NotificationsPage(): React.JSX.Element {
           Recurring Transaction Reminders
         </Title>
 
-        <Space direction="vertical" size={16} style={{ width: '100%' }}>
+        <Space orientation="vertical" size={16} style={{ width: '100%' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 16 }}>
             <div>
               <Text strong style={{ color: COLORS.walnut, display: 'block' }}>Show confirmation reminders</Text>

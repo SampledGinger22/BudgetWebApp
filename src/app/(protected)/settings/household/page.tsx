@@ -67,7 +67,7 @@ export default function HouseholdPage(): React.JSX.Element {
   }
 
   return (
-    <Space direction="vertical" size={24} style={{ width: '100%', maxWidth: 600 }}>
+    <Space orientation="vertical" size={24} style={{ width: '100%', maxWidth: 600 }}>
       <div>
         <Title level={4} style={{ margin: 0, color: COLORS.walnut }}>Household</Title>
         <Text type="secondary" style={{ fontSize: 13 }}>
@@ -78,7 +78,7 @@ export default function HouseholdPage(): React.JSX.Element {
       {/* Members list */}
       <div>
         <Text strong style={{ display: 'block', marginBottom: 12, color: COLORS.walnut }}>Members</Text>
-        <Space direction="vertical" size={8} style={{ width: '100%' }}>
+        <Space orientation="vertical" size={8} style={{ width: '100%' }}>
           {members.map((member) => (
             <Card key={member.id} size="small" styles={{ body: { padding: '10px 16px' } }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -113,7 +113,7 @@ export default function HouseholdPage(): React.JSX.Element {
           {invitesLoading ? (
             <Spin size="small" />
           ) : (
-            <Space direction="vertical" size={8} style={{ width: '100%' }}>
+            <Space orientation="vertical" size={8} style={{ width: '100%' }}>
               {invites.map((invite) => (
                 <Card key={invite.id} size="small" styles={{ body: { padding: '10px 16px' } }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>

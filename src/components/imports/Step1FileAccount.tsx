@@ -144,9 +144,9 @@ export function Step1FileAccount({ wizardState, onUpdate }: Step1Props): React.J
     : null
 
   return (
-    <Space direction="vertical" size={20} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={20} style={{ width: '100%' }}>
       <div style={{ background: COLORS.creamDark, borderRadius: 8, padding: 20 }}>
-        <Space direction="vertical" size={12} style={{ width: '100%' }}>
+        <Space orientation="vertical" size={12} style={{ width: '100%' }}>
           <Text strong style={{ color: COLORS.walnut }}>Import File</Text>
           <Space wrap>
             <Button icon={<UploadOutlined />} loading={loadingFile} onClick={() => document.getElementById('import-file-input')?.click()}>
@@ -186,7 +186,7 @@ export function Step1FileAccount({ wizardState, onUpdate }: Step1Props): React.J
       </div>
 
       <div style={{ background: COLORS.creamDark, borderRadius: 8, padding: 20 }}>
-        <Space direction="vertical" size={8} style={{ width: '100%' }}>
+        <Space orientation="vertical" size={8} style={{ width: '100%' }}>
           <Text strong style={{ color: COLORS.walnut }}>Import Into Account</Text>
           {loadingAccounts ? <Spin size="small" /> : (
             <Select placeholder="Select account..." value={wizardState.accountId ?? undefined}
@@ -200,7 +200,7 @@ export function Step1FileAccount({ wizardState, onUpdate }: Step1Props): React.J
 
       {wizardState.fileName && wizardState.importFormat !== 'qbo' && wizardState.headers.length > 0 && (
         <div style={{ background: COLORS.creamDark, borderRadius: 8, padding: 20 }}>
-          <Space direction="vertical" size={12} style={{ width: '100%' }}>
+          <Space orientation="vertical" size={12} style={{ width: '100%' }}>
             <Space>
               <Text strong style={{ color: COLORS.walnut }}>File Preview</Text>
               <Text style={{ fontSize: 12, color: '#888' }}>(first 5 rows — {wizardState.rows.length} total data rows)</Text>
@@ -212,8 +212,8 @@ export function Step1FileAccount({ wizardState, onUpdate }: Step1Props): React.J
         </div>
       )}
 
-      {!wizardState.fileName && <Alert type="info" message="Select a file to begin. Accepted formats: .csv, .tsv, .txt, .qbo, .ofx" showIcon />}
-      {wizardState.fileName && !wizardState.accountId && <Alert type="warning" message="Please select an account to import transactions into." showIcon />}
+      {!wizardState.fileName && <Alert type="info" title="Select a file to begin. Accepted formats: .csv, .tsv, .txt, .qbo, .ofx" showIcon />}
+      {wizardState.fileName && !wizardState.accountId && <Alert type="warning" title="Please select an account to import transactions into." showIcon />}
     </Space>
   )
 }

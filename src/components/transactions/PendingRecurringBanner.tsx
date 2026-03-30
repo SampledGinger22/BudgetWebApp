@@ -109,7 +109,7 @@ export function PendingRecurringBanner({
       type="info"
       showIcon
       icon={<ClockCircleOutlined />}
-      message={alertMessage}
+      title={alertMessage}
       description={
         <div style={{ marginTop: 8 }}>
           {displayEntries.map((entry) => {

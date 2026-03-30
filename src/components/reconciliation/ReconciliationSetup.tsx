@@ -72,7 +72,7 @@ export function ReconciliationSetup({
       okButtonProps={{ disabled: !canStart }}
       width={400}
     >
-      <Space direction="vertical" size={16} style={{ width: '100%', marginTop: 12 }}>
+      <Space orientation="vertical" size={16} style={{ width: '100%', marginTop: 12 }}>
         <div>
           <Text strong style={{ fontSize: 14, color: COLORS.walnut, marginBottom: 2, display: 'block' }}>
             Step 1: Enter your bank statement info

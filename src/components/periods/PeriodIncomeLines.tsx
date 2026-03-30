@@ -68,7 +68,7 @@ export function PeriodIncomeLines({ subPeriodId, incomeLines }: PeriodIncomeLine
   const totalActual = incomeLines.reduce((sum, l) => sum + (l.actual_cents ?? 0), 0)
 
   return (
-    <Space direction="vertical" size={6} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={6} style={{ width: '100%' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Text style={{ fontSize: 12, color: COLORS.walnut, fontWeight: 600 }}>Income Lines</Text>
         <Button size="small" icon={<PlusOutlined />} onClick={() => { setAdding(true); setLabel(''); setExpectedDollars(null); setActualDollars(null); setCategoryId(null) }}>Add</Button>

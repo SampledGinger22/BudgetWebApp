@@ -57,7 +57,7 @@ function AddGroupModal({
       onCancel={() => { setName(''); onClose() }}
       okText="Add Group"
       okButtonProps={{ loading: submitting, style: { backgroundColor: COLORS.terracotta, borderColor: COLORS.terracotta } }}
-      destroyOnClose
+      destroyOnHidden
     >
       <div style={{ marginTop: 16 }}>
         <label style={{ display: 'block', marginBottom: 8, color: COLORS.walnut, fontWeight: 500 }}>Group Name</label>
@@ -154,7 +154,7 @@ export default function CategoriesPage(): React.JSX.Element {
 
   if (shouldShowTemplatePicker) {
     return (
-      <Space direction="vertical" size={16} style={{ width: '100%' }}>
+      <Space orientation="vertical" size={16} style={{ width: '100%' }}>
         <Title level={4} style={{ margin: 0, color: COLORS.walnut }}>Categories</Title>
         <TemplatePicker groups={groups} onApply={handleTemplateApply} onSkip={handleTemplateSkip} />
       </Space>
@@ -162,7 +162,7 @@ export default function CategoriesPage(): React.JSX.Element {
   }
 
   return (
-    <Space direction="vertical" size={16} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={16} style={{ width: '100%' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
         <Title level={4} style={{ margin: 0, color: COLORS.walnut }}>Categories</Title>
         <Space>

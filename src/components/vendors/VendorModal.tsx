@@ -97,7 +97,7 @@ export function VendorModal({ open, onClose, onSuccess, editVendor }: VendorModa
         style: { backgroundColor: COLORS.terracotta, borderColor: COLORS.terracotta },
       }}
       afterClose={() => form.resetFields()}
-      destroyOnClose
+      destroyOnHidden
     >
       <Form form={form} layout="vertical" style={{ marginTop: 16 }}>
         <Form.Item name="name" label="Name" rules={[{ required: true, message: 'Please enter a name' }]}>

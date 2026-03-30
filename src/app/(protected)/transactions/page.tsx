@@ -535,13 +535,13 @@ export default function TransactionsPage(): React.JSX.Element {
   // ─── Render ──────────────────────────────────────────────────────────────
 
   return (
-    <Space direction="vertical" size={16} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={16} style={{ width: '100%' }}>
       {/* Import batch filter banner */}
       {!isReconciling && isFilteredByImportBatch && (
         <Alert
           type="info"
           showIcon
-          message={
+          title={
             <span>
               Showing transactions from this import batch.{' '}
               <a
@@ -562,7 +562,7 @@ export default function TransactionsPage(): React.JSX.Element {
           type="warning"
           showIcon
           icon={<CheckCircleFilled />}
-          message={
+          title={
             <span style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
               <span>You have an unfinished reconciliation for this account.</span>
               <Space size={8}>

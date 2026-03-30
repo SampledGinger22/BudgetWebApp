@@ -77,7 +77,7 @@ function DashboardControl(): React.JSX.Element {
   }
 
   return (
-    <Space direction="vertical" size={16} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={16} style={{ width: '100%' }}>
       <Title level={3} style={{ margin: 0, color: COLORS.walnut }}>Dashboard</Title>
 
       {/* Onboarding Checklist (UX-09) — shown when setup is incomplete */}
@@ -87,7 +87,7 @@ function DashboardControl(): React.JSX.Element {
             title={<Space><SettingOutlined style={{ color: COLORS.terracotta }} /><span>Get Started</span></Space>}
             style={{ borderColor: 'rgba(169, 85, 55, 0.2)' }}
           >
-            <Space direction="vertical" size={8} style={{ width: '100%' }}>
+            <Space orientation="vertical" size={8} style={{ width: '100%' }}>
               <Text type="secondary">Complete these steps to set up your budget:</Text>
               <ChecklistItem
                 done={hasAccounts} label="Add your first account" href="/accounts"

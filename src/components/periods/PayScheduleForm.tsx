@@ -54,7 +54,7 @@ export function AddScheduleForm({ onSubmit, onCancel }: AddScheduleFormProps): R
       </Form.Item>
       <Form.Item label="Frequency" name="schedule_type" initialValue="semimonthly">
         <Radio.Group>
-          <Space direction="vertical">
+          <Space orientation="vertical">
             <Radio value="semimonthly">Semi-monthly</Radio>
             <Radio value="monthly">Monthly</Radio>
             <Radio value="biweekly">Bi-weekly</Radio>

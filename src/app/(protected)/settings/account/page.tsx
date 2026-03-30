@@ -11,7 +11,7 @@ export default function AccountSettingsPage(): React.JSX.Element {
   const user = useAuthStore((s) => s.user)
 
   return (
-    <Space direction="vertical" size={24} style={{ width: '100%', maxWidth: 500 }}>
+    <Space orientation="vertical" size={24} style={{ width: '100%', maxWidth: 500 }}>
       <div>
         <Title level={4} style={{ margin: 0, color: COLORS.walnut }}>Account</Title>
         <Text type="secondary" style={{ fontSize: 13 }}>
@@ -21,7 +21,7 @@ export default function AccountSettingsPage(): React.JSX.Element {
 
       {/* Current user info */}
       <Card size="small">
-        <Space direction="vertical" size={8} style={{ width: '100%' }}>
+        <Space orientation="vertical" size={8} style={{ width: '100%' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <UserOutlined style={{ fontSize: 20, color: COLORS.terracotta }} />
             <div>

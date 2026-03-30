@@ -74,7 +74,7 @@ export function Step2ColumnMapping({ wizardState, onUpdate }: Step2Props): React
   const { mapping } = wizardState
 
   return (
-    <Space direction="vertical" size={16} style={{ width: '100%' }}>
+    <Space orientation="vertical" size={16} style={{ width: '100%' }}>
       <div style={{ background: COLORS.creamDark, borderRadius: 8, padding: 20 }}>
         <Text strong style={{ color: COLORS.walnut }}>Column Mapping</Text>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginTop: 12 }}>
@@ -90,7 +90,7 @@ export function Step2ColumnMapping({ wizardState, onUpdate }: Step2Props): React
 
         <Divider style={{ margin: '12px 0' }} />
 
-        <Space direction="vertical" size={8} style={{ width: '100%' }}>
+        <Space orientation="vertical" size={8} style={{ width: '100%' }}>
           <Text style={{ fontSize: 13, color: COLORS.walnut }}>Amount Mode</Text>
           <Select value={mapping.amountMode} onChange={(v) => updateMapping({ amountMode: v as 'single' | 'split' })} options={AMOUNT_MODE_OPTIONS} style={{ width: 300 }} size="small" />
         </Space>
